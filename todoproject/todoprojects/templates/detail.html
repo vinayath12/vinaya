@@ -1,0 +1,16 @@
+
+{% extends 'base.html' %}
+{% block content %}
+
+            <div class="shadow card" >
+            <div class="card-body">
+              <h5 class="card-title">{{result.name}}</h5>
+             <p class="card-text">{{result.priority}}</p>
+                <p class="card-text">{{result.date}}</p>
+            <a href="{% url 'delete' result.id %}" class="btn btn-success">done</a>
+                <a href="{% url 'update' result.id %}" class="btn btn-warning">update</a>
+             </div>
+             </div>
+            <br>
+
+{% endblock %}
